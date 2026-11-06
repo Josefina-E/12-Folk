@@ -3,7 +3,6 @@ User Story 1: Register Person
 As an authorized user, I want to be able to add a person and their information to Fólkayvirlitið.
 
 Acceptance Test:
-
 - Given the user is logged in and authorized to add a person
 - When the user clicks the "Add Person" button
 - Then a form is displayed where the user can enter the person's information
@@ -14,7 +13,6 @@ User Story 2: Edit Person Information
 
 As an authorized user, I want to be able to edit a person's information.
 Acceptance Test:
-
 - Given the user is logged in and authorized to edit a person's information
 - When the user selects a person and clicks the "Edit" button
 - Then a form containing the person's current information is displayed
@@ -23,28 +21,27 @@ Acceptance Test:
 
 User Story 3: Update Address
 
-User Story:
-As an authorized user, I want to be able to update a person's address in Fólkayvirlitið so that public authorities and partner institutions have their current location.   
+User Story: As an authorized user, I want to be able to update a person's address in Fólkayvirlitið so that public authorities and partner institutions have their current location.   
 Acceptance Test:
-Given the user is logged in and authorized to edit address details,
-When the user selects a person and navigates to the address update page,
-Then a form displaying the person's current address is shown.
-When the user enters a valid new address and clicks "Save Address",
-Then the person's address is successfully updated in the database, the change date is logged, a success message is displayed, and the updated address is made available via the API.   
+– Given the user is logged in and authorized to edit address details,
+– When the user selects a person and navigates to the address update page,
+– Then a form displaying the person's current address is shown.
+– When the user enters a valid new address and clicks "Save Address",
+– Then the person's address is successfully updated in the database, the change date is logged, a success message is displayed, and the updated address is made available via the API.   
 
 User Story 4: View Aggregate Statistics
 
-User Story:As an administrator, I want to be able to view compiled statistics combining person data with information from Taks and Akstovan so that I can analyze demographic data.   
+User Story: As an administrator, I want to be able to view compiled statistics combining person data with information from Taks and Akstovan so that I can analyze demographic data.   
 Acceptance Test:
-Given the user is logged in as an administrator and connected to Taks and Akstovan data feeds,   
-When the user clicks the "Generate Statistics" button,
-Then a loading indicator is displayed while the system correlates the person records with vehicle and tax data.   
-When the data aggregation process finishes,
-Then a statistical summary dashboard is displayed showing the combined metrics.
+– Given the user is logged in as an administrator and connected to Taks and Akstovan data feeds,   
+– When the user clicks the "Generate Statistics" button,
+– Then a loading indicator is displayed while the system correlates the person records with vehicle and tax data.   
+– When the data aggregation process finishes,
+– Then a statistical summary dashboard is displayed showing the combined metrics.
 
 User Story 5: Test API Integration via Stubs (V1)
-User Story:
-As a partner institution developer, I want to be able to call static stub API endpoints on Fólkayvirlitið so that I can test my system's integration before the full database is ready.   
-Acceptance Test:Given the V1 static stub service is deployed and running,   
-When the developer sends a request to the personal lookup endpoint,   
-Then the system returns a 200 OK HTTP status code and a valid, predefined JSON payload containing mock person data without throwing database errors.   
+User Story: As a partner institution developer, I want to be able to call static stub API endpoints on Fólkayvirlitið so that I can test my system's integration before the full database is ready.   
+Acceptance Test:
+– Given the V1 static stub service is deployed and running,   
+– When the developer sends a request to the personal lookup endpoint,   
+– Then the system returns a 200 OK HTTP status code and a valid, predefined JSON payload containing mock person data without throwing database errors.   
